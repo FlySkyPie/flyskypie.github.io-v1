@@ -18,6 +18,7 @@
       <a4-homework x="65" y="668" />
       <simple-forum x="133.12" y="562" />
       <simple-typing-game x="295" y="358"/>
+      <simple-bullet-hell x="238" y="473"/>
       <profile-bubble x="-12.48" y="-89" />
     </camera>
   </svg>
@@ -31,6 +32,7 @@ import AsciiEmpireBubble from "../components/AsciiEmpireBubble/AsciiEmpireBubble
 import A4HomeworkBubble from "../components/A4HomeworkBubble/A4HomeworkBubble.vue";
 import SimpleForumBubble from "../components/SimpleForumBubble/SimpleForumBubble.vue";
 import SimpleTypingGameBubble from "../components/SimpleTypingGameBubble/SimpleTypingGameBubble.vue";
+import SimpleBulletHellBubble from '../components/SimpleBulletHellBubble/SimpleBulletHellBubble.vue';
 import Camera from "../components/Camera.vue";
 
 export default {
@@ -43,6 +45,7 @@ export default {
     "a4-homework": A4HomeworkBubble,
     "simple-forum": SimpleForumBubble,
     "simple-typing-game": SimpleTypingGameBubble,
+    "simple-bullet-hell": SimpleBulletHellBubble,
   },
   data: () => ({
     viewWidth: 1024,
