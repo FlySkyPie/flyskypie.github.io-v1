@@ -37,6 +37,9 @@ export default {
   },
   methods: {
     scroll: function (event) {
+      if(event.target.className==="embeded-root"){
+        return;
+      }
       this.scale = event.deltaY > 0 ? this.scale / 1.1 : this.scale * 1.1;
     },
   },
