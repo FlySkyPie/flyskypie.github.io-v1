@@ -35,6 +35,11 @@ export default {
       );
     },
   },
+  methods: {
+    scroll: function (event) {
+      this.scale = event.deltaY > 0 ? this.scale / 1.1 : this.scale * 1.1;
+    },
+  },
 };
 </script>
 

@@ -9,10 +9,12 @@
     :height="viewHeight"
     version="1.1"
     style="height: 100%; width: 100%; cursor: default"
+    v-on:wheel="handScroll"
   >
-    <camera :viewWidth="viewWidth" :viewHeight="viewHeight">
+    <camera :viewWidth="viewWidth" :viewHeight="viewHeight" ref="camera">
       <bubble x="0" y="0" title="Space Dream" />
       <simple-staellite-launch-game x="12" y="98" />
+      <ascii-empire x="-147" y="390" />
       <profile-bubble x="-12.48" y="-89" />
     </camera>
   </svg>
@@ -22,7 +24,7 @@
 import ProfileBubble from "../components/ProfileBubble/ProfileBubble.vue";
 import Bubble from "./SimpleBubble.vue";
 import SimpleSatelliteLaunchGame from "../components/SimpleSatelliteLaunchGameBubble/SimpleSatelliteLaunchGameBubble.vue";
-
+import AsciiEmpireBubble from "../components/AsciiEmpireBubble/AsciiEmpireBubble.vue";
 import Camera from "../components/Camera.vue";
 
 export default {
@@ -31,6 +33,7 @@ export default {
     bubble: Bubble,
     "profile-bubble": ProfileBubble,
     "simple-staellite-launch-game": SimpleSatelliteLaunchGame,
+    "ascii-empire":AsciiEmpireBubble,
   },
   data: () => ({
     viewWidth: 1024,
@@ -45,6 +48,10 @@ export default {
       this.viewWidth = document.documentElement.clientWidth;
       this.viewHeight = document.documentElement.clientHeight;
     },
+    handScroll: function(event){
+      this.$refs.camera.scroll(event);
+
+    }
   },
   mounted() {
     this.$nextTick(function () {
