@@ -49,7 +49,7 @@ export default {
     "github-button": GithubButton,
     "hackmd-button": HackmdButton,
     "fackbook-button": FacebookButton,
-    epitaph: Epitaph,
+    "epitaph": Epitaph,
   },
   data: () => ({
     profileImage: "./image/avatar.png",

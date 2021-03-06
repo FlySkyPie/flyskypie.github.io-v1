@@ -12,6 +12,7 @@
   >
     <camera :viewWidth="viewWidth" :viewHeight="viewHeight">
       <bubble x="0" y="0" title="Space Dream" />
+      <simple-staellite-launch-game x="12" y="98" />
       <profile-bubble x="-12.48" y="-89" />
     </camera>
   </svg>
@@ -19,17 +20,17 @@
 
 <script>
 import ProfileBubble from "../components/ProfileBubble/ProfileBubble.vue";
-import HackmdButton from "../components/HackmdButton.vue";
-import FacebookButton from "../components/FacebookButton.vue";
-import Bubble from "../components/Bubble.vue";
+import Bubble from "./SimpleBubble.vue";
+import SimpleSatelliteLaunchGame from "../components/SimpleSatelliteLaunchGameBubble/SimpleSatelliteLaunchGameBubble.vue";
+
 import Camera from "../components/Camera.vue";
+
 export default {
   components: {
-    "camera": Camera,
-    "bubble": Bubble,
+    camera: Camera,
+    bubble: Bubble,
     "profile-bubble": ProfileBubble,
-    "hackmd-button": HackmdButton,
-    "fackbook-button": FacebookButton,
+    "simple-staellite-launch-game": SimpleSatelliteLaunchGame,
   },
   data: () => ({
     viewWidth: 1024,
