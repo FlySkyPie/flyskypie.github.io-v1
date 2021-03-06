@@ -2,7 +2,7 @@
   <g :transform="position">
     <g transform="translate(-159,-159)" class="root">
       <circle class="backgound" cx="159" cy="159" r="158" />
-      <text class="sub-title" x="57" y="151">項目大約啟動於：2021-01-31</text>
+      <text class="sub-title" x="57" y="151">項目大約啟動於：2012-01-31</text>
       <text x="57" y="170">ShiangBaDo Online</text>
       <website-bubble x="84" y="231"/>
       <simple-3d-shooting-game x="213" y="237"/>
