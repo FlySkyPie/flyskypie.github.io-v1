@@ -27,12 +27,12 @@ export default {
       default: "#",
     },
     x: {
-      type: Number,
-      default: 100,
+      type: String,
+      default: "0",
     },
     y: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: "0",
     },
   },
   computed: {
