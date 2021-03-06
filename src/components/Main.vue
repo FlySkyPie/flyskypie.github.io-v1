@@ -15,7 +15,8 @@
       <bubble x="0" y="0" title="Space Dream" />
       <simple-staellite-launch-game x="12" y="98" />
       <ascii-empire x="-147" y="390" />
-      <a4-homework />
+      <a4-homework  x="65" y="668"/>
+      <simple-forum x="133.12" y="562" />
       <profile-bubble x="-12.48" y="-89" />
     </camera>
   </svg>
@@ -27,6 +28,7 @@ import Bubble from "./SimpleBubble.vue";
 import SimpleSatelliteLaunchGame from "../components/SimpleSatelliteLaunchGameBubble/SimpleSatelliteLaunchGameBubble.vue";
 import AsciiEmpireBubble from "../components/AsciiEmpireBubble/AsciiEmpireBubble.vue";
 import A4HomeworkBubble from "../components/A4HomeworkBubble/A4HomeworkBubble.vue";
+import SimpleForumBubble from '../components/SimpleForumBubble/SimpleForumBubble.vue';
 import Camera from "../components/Camera.vue";
 
 export default {
@@ -37,6 +39,7 @@ export default {
     "simple-staellite-launch-game": SimpleSatelliteLaunchGame,
     "ascii-empire": AsciiEmpireBubble,
     "a4-homework": A4HomeworkBubble,
+    "simple-forum":SimpleForumBubble,
   },
   data: () => ({
     viewWidth: 1024,
