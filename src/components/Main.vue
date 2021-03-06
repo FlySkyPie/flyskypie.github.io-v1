@@ -7,15 +7,30 @@
     xmlns="http://www.w3.org/2000/svg"
     :width="viewWidth"
     :height="viewHeight"
-    viewBox="0 0 425.75732 321.14359"
     version="1.1"
     style="height: 100%; width: 100%; cursor: default"
-  ></svg>
+  >
+    <camera :viewWidth="viewWidth" :viewHeight="viewHeight">
+      <bubble x="0" y="0" title="Space Dream" />
+      <profile-bubble x="-12.48" y="-89" />
+    </camera>
+  </svg>
 </template>
 
 <script>
+import ProfileBubble from "../components/ProfileBubble/ProfileBubble.vue";
+import HackmdButton from "../components/HackmdButton.vue";
+import FacebookButton from "../components/FacebookButton.vue";
+import Bubble from "../components/Bubble.vue";
+import Camera from "../components/Camera.vue";
 export default {
-  components: {},
+  components: {
+    "camera": Camera,
+    "bubble": Bubble,
+    "profile-bubble": ProfileBubble,
+    "hackmd-button": HackmdButton,
+    "fackbook-button": FacebookButton,
+  },
   data: () => ({
     viewWidth: 1024,
     viewHeight: 768,

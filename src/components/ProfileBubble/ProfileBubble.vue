@@ -1,27 +1,29 @@
  <template>
-  <g>
-    <circle class="backgound" cx="50" cy="50" r="49" />
-    <text class="name" xml:space="preserve" x="41.499592" y="38.501255"
-      >FlySkyPie (Wei Ji)</text
-    >
-    <image
-      :href="profileImage"
-      width="35"
-      height="35"
-      x="-17.5"
-      y="-17.5"
-      style="clip-path: circle(50%)"
-      transform="matrix(1.0,0,0,1.0,19,50)"
-    />
-    <epitaph />
-    <g transform="matrix(0.610794,0,0,0.610794,62,57)">
-      <github-button url="https://github.com/FlySkyPie" />
-    </g>
-    <g transform="matrix(0.610794,0,0,0.610794,73,57)">
-      <hackmd-button url="https://hackmd.io/@FlySkyPie" />
-    </g>
-    <g transform="matrix(0.610794,0,0,0.610794,84,57)">
-      <fackbook-button url="https://www.facebook.com/wei.ji.355/" />
+  <g :transform="position">
+    <g transform="translate(-50,-50)">
+      <circle class="backgound" cx="50" cy="50" r="49" />
+      <text class="name" xml:space="preserve" x="41.499592" y="38.501255"
+        >FlySkyPie (Wei Ji)</text
+      >
+      <image
+        :href="profileImage"
+        width="35"
+        height="35"
+        x="-17.5"
+        y="-17.5"
+        style="clip-path: circle(50%)"
+        transform="matrix(1.0,0,0,1.0,19,50)"
+      />
+      <epitaph />
+      <g transform="matrix(0.610794,0,0,0.610794,62,57)">
+        <github-button url="https://github.com/FlySkyPie" />
+      </g>
+      <g transform="matrix(0.610794,0,0,0.610794,73,57)">
+        <hackmd-button url="https://hackmd.io/@FlySkyPie" />
+      </g>
+      <g transform="matrix(0.610794,0,0,0.610794,84,57)">
+        <fackbook-button url="https://www.facebook.com/wei.ji.355/" />
+      </g>
     </g>
   </g>
 </template>
@@ -33,6 +35,16 @@ import FacebookButton from "../../components/FacebookButton.vue";
 import Epitaph from "./Epitaph.vue";
 
 export default {
+  props: {
+    x: {
+      type: String,
+      default: "0",
+    },
+    y: {
+      type: String,
+      default: "0",
+    },
+  },
   components: {
     "github-button": GithubButton,
     "hackmd-button": HackmdButton,
@@ -42,6 +54,11 @@ export default {
   data: () => ({
     profileImage: "./image/avatar.png",
   }),
+  computed: {
+    position: function () {
+      return `translate(${this.x},${this.y})`;
+    },
+  },
 };
 </script>
 
