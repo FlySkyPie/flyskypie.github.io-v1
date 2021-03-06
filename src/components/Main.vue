@@ -20,6 +20,7 @@
       <simple-typing-game x="295" y="358" />
       <simple-bullet-hell x="238" y="473" />
       <shiangbado-online x="-170" y="613" />
+      <braver-of-flames-respawn x="58" y="340" />
       <profile-bubble x="-12.48" y="-89" />
     </camera>
   </svg>
@@ -35,6 +36,8 @@ import SimpleForumBubble from "../components/SimpleForumBubble/SimpleForumBubble
 import SimpleTypingGameBubble from "../components/SimpleTypingGameBubble/SimpleTypingGameBubble.vue";
 import SimpleBulletHellBubble from "../components/SimpleBulletHellBubble/SimpleBulletHellBubble.vue";
 import ShiangBaDoOnlineBubble from "../components/ShiangBaDoOnlineBubble/ShiangBaDoOnlineBubble.vue";
+import BraverOfFlamesRespawnBubble from "../components/BraverOfFlamesRespawnBubble/BraverOfFlamesRespawnBubble.vue";
+
 import Camera from "../components/Camera.vue";
 
 export default {
@@ -49,6 +52,7 @@ export default {
     "simple-typing-game": SimpleTypingGameBubble,
     "simple-bullet-hell": SimpleBulletHellBubble,
     "shiangbado-online": ShiangBaDoOnlineBubble,
+    "braver-of-flames-respawn": BraverOfFlamesRespawnBubble,
   },
   data: () => ({
     viewWidth: 1024,
