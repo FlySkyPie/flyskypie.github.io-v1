@@ -22,6 +22,7 @@
       <shiangbado-online x="-170" y="613" />
       <braver-of-flames-respawn x="58" y="340" />
       <the-key-of-huanche x="-435" y="53.491" />
+      <itugv x="402" y="-71.148" />
       <profile-bubble x="-12.48" y="-89" />
     </camera>
   </svg>
@@ -39,6 +40,7 @@ import SimpleBulletHellBubble from "../components/SimpleBulletHellBubble/SimpleB
 import ShiangBaDoOnlineBubble from "../components/ShiangBaDoOnlineBubble/ShiangBaDoOnlineBubble.vue";
 import BraverOfFlamesRespawnBubble from "../components/BraverOfFlamesRespawnBubble/BraverOfFlamesRespawnBubble.vue";
 import TheKeyOfHuancheBubble from "../components/TheKeyOfHuancheBubble/TheKeyOfHuancheBubble.vue";
+import ITUGVBubble from '../components/ITUGVBubble/ITUGVBubble.vue';
 
 import Camera from "../components/Camera.vue";
 
@@ -56,6 +58,7 @@ export default {
     "shiangbado-online": ShiangBaDoOnlineBubble,
     "braver-of-flames-respawn": BraverOfFlamesRespawnBubble,
     "the-key-of-huanche": TheKeyOfHuancheBubble,
+    "itugv":ITUGVBubble,
   },
   data: () => ({
     viewWidth: 1024,
