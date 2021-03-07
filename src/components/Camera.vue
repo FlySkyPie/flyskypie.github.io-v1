@@ -58,9 +58,9 @@ export default {
     },
     transitionClass: function () {
       if (this.isScroll) {
-        return "";
+        return "base";
       }
-      return "camera";
+      return "camera base";
     },
   },
   methods: {
@@ -82,8 +82,13 @@ export default {
   },
   updated: function () {
     this.$nextTick(function () {
-      if(this.isScroll){
-        this.isScroll = false;
+      if (this.isScroll && !this.preoff) {
+        this.preoff = true;
+        setTimeout(() => {
+          this.preoff = false;
+          this.isScroll = false;
+        }, 100);
+        //this.isScroll = false;
       }
       // Code that will run only after the
       // entire view has been re-rendered
@@ -93,6 +98,10 @@ export default {
 </script>
 
 <style scoped>
+.base {
+  will-change: auto;
+}
+
 .camera {
   transition: transform 500ms; /**/
 }
