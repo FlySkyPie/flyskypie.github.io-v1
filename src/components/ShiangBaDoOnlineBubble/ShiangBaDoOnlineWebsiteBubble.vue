@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="shiang-ba-do-online-website">
     <text class="title" xml:space="preserve" x="50" y="32"
       >ShiangBaDo Online (Website)</text
     >

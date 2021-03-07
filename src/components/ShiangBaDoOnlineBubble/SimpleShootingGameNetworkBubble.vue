@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="simple-shooting-game-network">
     <text class="title" x="50" y="30">Simple Shooting Game</text>
     <text class="title" x="50" y="36">(with network)</text>
     <image :href="imageUrl" x="5" y="40" width="50" height="30" />

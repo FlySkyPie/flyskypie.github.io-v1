@@ -1,15 +1,12 @@
 <template>
-  <g :transform="position">
-    <g transform="translate(-159,-159)" class="root">
-      <circle class="backgound" cx="159" cy="159" r="158" />
-      <text class="sub-title" x="57" y="151">項目大約啟動於：2012-01-31</text>
+  <bubble :x="x" :y="y" id="shiang-ba-do-online" :size="3.18" class="root">
+          <text class="sub-title" x="57" y="151">項目大約啟動於：2012-01-31</text>
       <text x="57" y="170">ShiangBaDo Online</text>
       <website-bubble x="84" y="231"/>
       <simple-3d-shooting-game x="213" y="237"/>
       <simple-shooting-game x="100" y="80"/>
       <simple-shooting-game-network x="235" y="97" />
-    </g>
-  </g>
+  </bubble>
 </template>
 
 <script>
@@ -17,6 +14,7 @@ import ShiangBaDoOnlineWebsiteBubble from "./ShiangBaDoOnlineWebsiteBubble.vue";
 import Simple3DShootingGameBubble from './Simple3DShootingGameBubble.vue';
 import SimpleShootingGameBubble from './SimpleShootingGameBubble.vue';
 import SimpleShootingGameNetworkBubble from './SimpleShootingGameNetworkBubble.vue';
+import Bubble from "../Bubble.vue";
 
 export default {
   components: {
@@ -24,6 +22,7 @@ export default {
     "simple-3d-shooting-game": Simple3DShootingGameBubble,
     "simple-shooting-game": SimpleShootingGameBubble,
     "simple-shooting-game-network": SimpleShootingGameNetworkBubble,
+    bubble: Bubble,
   },
   props: {
     x: {
@@ -36,9 +35,6 @@ export default {
     },
   },
   computed: {
-    position: function () {
-      return `translate(${this.x},${this.y})`;
-    },
   },
 };
 </script>

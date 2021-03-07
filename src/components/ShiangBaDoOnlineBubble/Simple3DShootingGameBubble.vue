@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="simple-3d-shooting-game">
     <text class="title" x="50" y="32">Simple 3D Shooting Game</text>
     <image :href="imageUrl" x="9" y="36" width="50" height="38" />
     <g transform="translate(60,50) scale(0.09)">
