@@ -1,45 +1,55 @@
 {
-  "name": "dreamchaser-timeline",
+  "name": "wacky-blueprint-vue",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "webpack serve --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
-  },
   "author": "FlySkyPie (Wei Ji)",
   "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
   "dependencies": {
-    "archiver": "^5.1.0",
-    "browserify-zlib": "^0.2.0",
-    "path-browserify": "^1.0.1",
-    "raw-loader": "^4.0.2",
-    "stream-browserify": "^3.0.0",
-    "util": "^0.12.3",
+    "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-router": "^3.5.1"
+    "vue-router": "^3.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.7.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
     "compass-mixins": "^0.12.10",
-    "copy-webpack-plugin": "^6.3.2",
-    "css-loader": "^3.4.0",
-    "deepmerge": "^4.2.2",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
     "less": "^4.0.0",
-    "less-loader": "^7.1.0",
+    "less-loader": "^7.2.1",
     "node-sass": "^5.0.0",
-    "sass": "^1.30.0",
-    "sass-loader": "^10.1.0",
-    "vue-loader": "^15.8.3",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^5.9.0",
-    "webpack-cli": "^4.2.0",
-    "webpack-bundle-analyzer": "^4.3.0",
-    "webpack-dev-server": "^3.11.0"
-  }
+    "raw-loader": "^4.0.2",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-vuetify": "~2.0.9",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
