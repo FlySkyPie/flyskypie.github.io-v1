@@ -1,10 +1,13 @@
  <template>
-  <g :transform="transform">
-    <slot />
+  <g :style="transformScale" class="camera">
+    <g :style="transformTranslate" class="camera">
+      <slot />
+    </g>
   </g>
 </template>
 
 <script>
+import Viewpoints from "./Camera/Viewpoints";
 export default {
   data: () => ({
     scale: 1,
@@ -23,16 +26,35 @@ export default {
     },
   },
   computed: {
-    transform: function () {
+    transformTranslate: function () {
+      const currentViewpoint = Viewpoints.find(
+        (item) => item.id === this.$route.name
+      );
+      if (currentViewpoint) {
+        const scale = currentViewpoint.scale * this.scale;
+        const translateX = this.viewWidth / scale / 2 - currentViewpoint.x;
+        const translateY = this.viewHeight / scale / 2 - currentViewpoint.y;
+        const transform = `translate(${translateX}px,${translateY}px)`;
+        return `transform:${transform};`;
+      } /**/
       const scale = this.scale;
       const translateX = this.viewWidth / scale / 2 - this.cx;
       const translateY = this.viewHeight / scale / 2 - this.cy;
-
-      return (
-        `scale(${scale})` +
-        `translate(${translateX},${translateY})` +
-        `rotate(-${this.angle},${this.cx},${this.cy})`
+      const transform = `translate(${translateX}px,${translateY}px)`;
+      return `transform:${transform};`;
+    },
+    transformScale: function () {
+      const currentViewpoint = Viewpoints.find(
+        (item) => item.id === this.$route.name
       );
+
+      if (currentViewpoint) {
+        const scale = currentViewpoint.scale * this.scale;
+        const transform = `scale(${scale})`;
+        this.lastScale = transform;
+        return `transform:${transform};`;
+      } /**/
+      return `transform:${this.lastScale};`;
     },
   },
   methods: {
@@ -51,4 +73,7 @@ export default {
 </script>
 
 <style scoped>
+.camera {
+  transition: transform 300ms; /**/
+}
 </style>

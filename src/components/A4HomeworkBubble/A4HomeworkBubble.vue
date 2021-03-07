@@ -12,7 +12,7 @@
     />
 
     <g transform="translate(51,40) scale(0.09)">
-      <foreignObject width="450" height="350">
+      <foreignObject width="450" height="180">
         <div xmlns="http://www.w3.org/1999/xhtml" class="embeded-root">
           <p>作品名稱： A4 作業</p>
           <p>作品細節詳見 HackMD 的文章。</p>

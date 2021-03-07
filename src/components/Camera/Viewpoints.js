@@ -1,0 +1,148 @@
+const viewpoints = [
+    {
+        id: "profile",
+        x: -12,
+        y: -90,
+        scale: 7.1284,
+    },
+    {
+        id: "ITUGV",
+        x: 402,
+        y: -71,
+        scale: 0.9090909090909091,
+    },
+    {
+        id: "MMFEDP",
+        x: 390,
+        y: 19,
+        scale: 8.954302432552389,
+    },
+    {
+        id: "final-project",
+        x: 330,
+        y: 185,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "ouroboros-program",
+        x: 200,
+        y: 95,
+        scale: 4.594972986357222,
+    },
+    {
+        id: "general-construct-component",
+        x: 258,
+        y: 22,
+        scale: 6.72749994932561,
+    },
+    {
+        id: "braver-of-flames-respawn",
+        x: -88 + 150,
+        y: 193 + 150,
+        scale: 2.357947691000002,
+    },
+    {
+        id: "25d-engine",
+        x: -18,
+        y: 406,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "braver-of-flames",
+        x: 93,
+        y: 251,
+        scale: 8.140274938683989 * 1.3310000000000004,
+    },
+    {
+        id: "simple-typing-game",
+        x: 295,
+        y: 358,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "simple-bullet-hell",
+        x: 238,
+        y: 473,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "simple-forum",
+        x: 133,
+        y: 562,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "a4-homepage",
+        x: 62,
+        y: 666,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "simple-satellite-launch-game",
+        x: 10,
+        y: 100,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "ascii-empire",
+        x: -150,
+        y: 388,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "shiang-ba-do-online",
+        x: -329 + 160,
+        y: 454 + 160,
+        scale: 2.853116706110003,
+    },
+    {
+        id: "simple-3d-shooting-game",
+        x: -116,
+        y: 691,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "shiang-ba-do-online-website",
+        x: -245,
+        y: 686,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "simple-shooting-game",
+        x: -230,
+        y: 534,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "simple-shooting-game-network",
+        x: -94,
+        y: 551,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "the-key-of-huanche",
+        x: -436,
+        y: 54,
+        scale: 1,
+    },
+    {
+        id: "ASMCBINFH",
+        x: 0,
+        y: 0,
+        scale: 8.140274938683989,
+    },
+    {
+        id: "gear-redolence",
+        x: -507 + 150,
+        y: -288 + 150,
+        scale: 2.853116706110003,
+    },
+    {
+        id: "dental-defender",
+        x: -384+50,
+        y: -52,
+        scale: 8.140274938683989,
+    },
+];
+
+export default viewpoints;
