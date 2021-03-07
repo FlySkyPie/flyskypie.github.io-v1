@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="simple-forum">
     <text class="title" xml:space="preserve" x="50" y="32">Simple Forum</text>
     <image :href="imageUrl" x="5" y="37" width="40" height="30" />
     <g transform="translate(47,37) scale(0.09)">

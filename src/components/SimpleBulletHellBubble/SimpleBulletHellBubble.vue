@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="simple-bullet-hell">
     <text class="title" xml:space="preserve" x="50" y="32"
       >Simple Bullet Hell</text
     >
