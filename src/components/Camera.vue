@@ -69,6 +69,11 @@ export default {
       this.scale = event.deltaY > 0 ? this.scale / 1.1 : this.scale * 1.1;
     },
   },
+  watch: {
+    $route(to, from) {
+      this.scale = 1;
+    },
+  },
 };
 </script>
 

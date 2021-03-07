@@ -44,8 +44,8 @@ const routes = [
     path: '/simple-forum',
     name: 'simple-forum',
   }, {
-    path: '/a4-homepage',
-    name: 'a4-homepage',
+    path: '/a4-homework',
+    name: 'a4-homework',
   }, {
     path: '/simple-satellite-launch-game',
     name: 'simple-satellite-launch-game',

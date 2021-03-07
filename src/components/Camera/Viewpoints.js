@@ -1,5 +1,11 @@
 const viewpoints = [
     {
+        id: "homepage",
+        x: 0,
+        y: 0,
+        scale: 1,
+    },
+    {
         id: "profile",
         x: -12,
         y: -90,
@@ -72,7 +78,7 @@ const viewpoints = [
         scale: 8.140274938683989,
     },
     {
-        id: "a4-homepage",
+        id: "a4-homework",
         x: 62,
         y: 666,
         scale: 8.140274938683989,
@@ -139,7 +145,7 @@ const viewpoints = [
     },
     {
         id: "dental-defender",
-        x: -384+50,
+        x: -384 + 50,
         y: -52,
         scale: 8.140274938683989,
     },
