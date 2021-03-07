@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y" class="root">
+  <bubble :x="x" :y="y" class="root" id="final-project">
     <text class="title" x="50" y="25">大學專題</text>
     <text class="sub-title" x="50" y="30"
       >Production of an equipment which</text

@@ -1,34 +1,32 @@
  <template>
-  <g :transform="position">
-    <g transform="translate(-370,-370)">
-      <circle class="backgound" cx="370" cy="370" r="368" />
-      <text class="title" x="370" y="360">ITUGV</text>
-      <text class="sub-title" x="370" y="400"
-        >Independent Task Unmanned Ground Vehicle</text
-      >
-      <simple-bubble title="Obj.Suspension.part.MKII" x="269" y="119" />
-      <simple-bubble title="Obj.FSP.Track.Mk IV" x="474" y="117" />
-      <simple-bubble title="Obj.Suspension.part.MKIII" x="161" y="242" />
-      <simple-bubble title="Obj.Suspension.part.Mk I" x="373" y="242" />
-      <simple-bubble title="Obj.FSP.Track.Mk III" x="584" y="242" />
-      <simple-bubble title="XVT1401(F)" x="500" y="483" />
-      <simple-bubble title="XVT1301(F)" x="620" y="482" />
-      <simple-bubble title="XVT1501(F)" x="433" y="591" />
-      <simple-bubble title="XVT1302(F)" x="554" y="591" />
-    <ouroboros-program x="170" y="536"/>
-      <general-construct-component x="227" y="462" />
-      <final-project x="297" y="626" />
-      <mmfedp-bubble x="357" y="460" />
-    </g>
-  </g>
+  <bubble :x="x" :y="y" id="ITUGV" :size="7.4">
+    <text class="title" x="370" y="360">ITUGV</text>
+    <text class="sub-title" x="370" y="400"
+      >Independent Task Unmanned Ground Vehicle</text
+    >
+    <simple-bubble title="Obj.Suspension.part.MKII" x="269" y="119" />
+    <simple-bubble title="Obj.FSP.Track.Mk IV" x="474" y="117" />
+    <simple-bubble title="Obj.Suspension.part.MKIII" x="161" y="242" />
+    <simple-bubble title="Obj.Suspension.part.Mk I" x="373" y="242" />
+    <simple-bubble title="Obj.FSP.Track.Mk III" x="584" y="242" />
+    <simple-bubble title="XVT1401(F)" x="500" y="483" />
+    <simple-bubble title="XVT1301(F)" x="620" y="482" />
+    <simple-bubble title="XVT1501(F)" x="433" y="591" />
+    <simple-bubble title="XVT1302(F)" x="554" y="591" />
+    <ouroboros-program x="170" y="536" />
+    <general-construct-component x="227" y="462" />
+    <final-project x="297" y="626" />
+    <mmfedp-bubble x="357" y="460" />
+  </bubble>
 </template>
 
 <script>
 import SimpleBubble from "../SimpleBubble.vue";
+import Bubble from "../Bubble.vue";
 import MMFEDPBubble from "./MMFEDPBubble.vue";
 import FinalProjectBubble from "./FinalProjectBubble.vue";
 import GeneralConstructComponentBubble from "./GeneralConstructComponentBubble.vue";
-import OuroborosProgramBubble from './OuroborosProgramBubble.vue';
+import OuroborosProgramBubble from "./OuroborosProgramBubble.vue";
 
 export default {
   components: {
@@ -36,7 +34,8 @@ export default {
     "mmfedp-bubble": MMFEDPBubble,
     "final-project": FinalProjectBubble,
     "general-construct-component": GeneralConstructComponentBubble,
-    "ouroboros-program":OuroborosProgramBubble,
+    "ouroboros-program": OuroborosProgramBubble,
+    bubble: Bubble,
   },
   props: {
     x: {
@@ -51,6 +50,9 @@ export default {
   computed: {
     position: function () {
       return `translate(${this.x},${this.y})`;
+    },
+    isRoute: function () {
+      return this.$route.path == "/ITUGV";
     },
   },
 };

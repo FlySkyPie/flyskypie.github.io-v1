@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="general-construct-component">
     <text class="title" x="50" y="35">General Construct Component</text>
     <image :href="imageUrl" x="10" y="40" width="45" height="27" />
     <g transform="translate(58,40) scale(0.09)">

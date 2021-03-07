@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="MMFEDP">
     <text class="title" x="50" y="35">MMFEDP</text>
     <text class="sub-title" x="50" y="38"
       >Modular Multi-Faceted Electrical Develop Platform</text

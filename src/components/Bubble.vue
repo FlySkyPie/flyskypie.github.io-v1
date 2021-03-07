@@ -1,7 +1,7 @@
  <template>
   <g :transform="position">
     <g :transform="`translate(-${radius},-${radius})`" class="root">
-      <router-link :to="id" v-if="!isRoute">
+      <router-link :to="id" v-if="!isRoute && id !== ''">
         <circle
           class="backgound"
           :style="bubleStyle"
@@ -11,7 +11,7 @@
         />
       </router-link>
       <circle
-        v-if="isRoute"
+        v-if="isRoute || id === ''"
         class="backgound"
         :style="bubleStyle"
         :cx="`${radius}`"
