@@ -1,6 +1,6 @@
  <template>
-  <bubble :x="x" :y="y">
-    <text class="title" xml:space="preserve" x="50" y="32"
+  <bubble :x="x" :y="y" id="a4-homework">
+    <text class="title"  x="50" y="32"
       >A4 作業</text
     >
     <image
@@ -53,15 +53,6 @@ export default {
 </script>
 
 <style scoped>
-.backgound {
-  fill: #ffffff;
-  stroke: #000000;
-  stroke-width: 0.191031;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-opacity: 1;
-}
-
 .title {
   font-style: normal;
   font-weight: normal;
