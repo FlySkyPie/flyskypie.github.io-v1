@@ -1,6 +1,6 @@
  <template>
-  <g :style="transformScale" class="camera">
-    <g :style="transformTranslate" class="camera">
+  <g :style="transformTranslate" :class="transitionClass">
+    <g :style="transformScale" :class="transitionClass">
       <slot />
     </g>
   </g>
@@ -14,6 +14,7 @@ export default {
     cx: 0,
     cy: 0,
     angle: 0,
+    isScroll: false,
   }),
   props: {
     viewWidth: {
@@ -32,16 +33,15 @@ export default {
       );
       if (currentViewpoint) {
         const scale = currentViewpoint.scale * this.scale;
-        const translateX = this.viewWidth / scale / 2 - currentViewpoint.x;
-        const translateY = this.viewHeight / scale / 2 - currentViewpoint.y;
+        const translateX =
+          (this.viewWidth / scale / 2 - currentViewpoint.x) * scale;
+        const translateY =
+          (this.viewHeight / scale / 2 - currentViewpoint.y) * scale;
         const transform = `translate(${translateX}px,${translateY}px)`;
+        this.lastTranslate = transform;
         return `transform:${transform};`;
       } /**/
-      const scale = this.scale;
-      const translateX = this.viewWidth / scale / 2 - this.cx;
-      const translateY = this.viewHeight / scale / 2 - this.cy;
-      const transform = `translate(${translateX}px,${translateY}px)`;
-      return `transform:${transform};`;
+      return `transform:${this.lastTranslate};`;
     },
     transformScale: function () {
       const currentViewpoint = Viewpoints.find(
@@ -56,6 +56,12 @@ export default {
       } /**/
       return `transform:${this.lastScale};`;
     },
+    transitionClass: function () {
+      if (this.isScroll) {
+        return "";
+      }
+      return "camera";
+    },
   },
   methods: {
     scroll: function (event) {
@@ -65,7 +71,7 @@ export default {
       ) {
         return;
       }
-
+      this.isScroll = true;
       this.scale = event.deltaY > 0 ? this.scale / 1.1 : this.scale * 1.1;
     },
   },
@@ -74,11 +80,20 @@ export default {
       this.scale = 1;
     },
   },
+  updated: function () {
+    this.$nextTick(function () {
+      if(this.isScroll){
+        this.isScroll = false;
+      }
+      // Code that will run only after the
+      // entire view has been re-rendered
+    });
+  },
 };
 </script>
 
 <style scoped>
 .camera {
-  transition: transform 1500ms; /**/
+  transition: transform 500ms; /**/
 }
 </style>
