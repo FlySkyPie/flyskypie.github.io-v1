@@ -1,7 +1,5 @@
  <template>
-  <g :transform="position">
-    <g transform="translate(-150,-150)">
-      <circle class="backgound" cx="150" cy="150" r="149" />
+   <bubble :x="x" :y="y" id="gear-redolence" :size="3">
       <text class="title" x="150" y="95">底火的芬芳</text>
       <text class="sub-title" x="150" y="110">(Gear Redolence)</text>
       <image
@@ -58,15 +56,17 @@
         </foreignObject>
       </g>
       <dental-defender x="172" y="236" />
-    </g>
-  </g>
+   </bubble>
 </template>
 
 <script>
 import DentalDefenderBubble from "./DentalDefenderBubble.vue";
+import Bubble from "../../Bubble.vue";
+
 export default {
   components: {
     "dental-defender": DentalDefenderBubble,
+    bubble: Bubble,
   },
   props: {
     x: {
@@ -79,9 +79,6 @@ export default {
     },
   },
   computed: {
-    position: function () {
-      return `translate(${this.x},${this.y})`;
-    },
   },
   data: () => ({
     imageUrl: "./image/Gear-Redolence.png",

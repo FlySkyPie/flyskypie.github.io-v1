@@ -1,27 +1,26 @@
  <template>
-  <g :transform="position">
-    <g transform="translate(-400,-400)">
-      <circle class="backgound" cx="400" cy="400" r="398" />
-      <gear-redolence x="479" y="208" />
-      <text class="title" x="50" y="420">The Key Of Huanche</text>
-      <text class="sub-title" x="590" y="520"
-        >這個專案有點難解釋，一言難盡。點這個了解更多→</text
-      >
-      <g transform="matrix(8.2,0,0,8.2,600,450)">
-        <hackmd-button url="https://hackmd.io/@FlySkyPie/SkOSms__X" />
-      </g>
+  <bubble :x="x" :y="y" id="the-key-of-huanche" :size="8">
+    <gear-redolence x="479" y="208" />
+    <text class="title" x="50" y="420">The Key Of Huanche</text>
+    <text class="sub-title" x="590" y="520"
+      >這個專案有點難解釋，一言難盡。點這個了解更多→</text
+    >
+    <g transform="matrix(8.2,0,0,8.2,600,450)">
+      <hackmd-button url="https://hackmd.io/@FlySkyPie/SkOSms__X" />
     </g>
-  </g>
+  </bubble>
 </template>
 
 <script>
 import GearRedolenceBubble from "./GearRedolenceBubble/GearRedolenceBubble.vue";
 import HackmdButton from "../../components/HackmdButton.vue";
+import Bubble from "../Bubble.vue";
 
 export default {
   components: {
     "gear-redolence": GearRedolenceBubble,
     "hackmd-button": HackmdButton,
+    bubble: Bubble,
   },
   props: {
     title: {

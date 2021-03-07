@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="dental-defender">
     <text class="title" x="50" y="32"
       >Dental Defender: Saga of the Candy Horde</text
     >

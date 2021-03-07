@@ -79,6 +79,6 @@ export default {
 
 <style scoped>
 .camera {
-  transition: transform 300ms; /**/
+  transition: transform 1500ms; /**/
 }
 </style>
