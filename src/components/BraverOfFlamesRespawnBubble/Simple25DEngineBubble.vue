@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="25d-engine">
     <text class="title" x="50" y="20">2.5D Engine</text>
     <image :href="imageUrl1" x="15" y="22" width="40" height="38" />
     <image :href="imageUrl2" x="15" y="52" width="40" height="38" />

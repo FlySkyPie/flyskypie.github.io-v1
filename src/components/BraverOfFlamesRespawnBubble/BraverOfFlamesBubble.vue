@@ -1,5 +1,5 @@
  <template>
-  <bubble :x="x" :y="y">
+  <bubble :x="x" :y="y" id="braver-of-flames">
     <text class="title" x="50" y="30">烈焰勇者</text>
     <image :href="imageUrl" x="13" y="35" width="40" height="22.8" />
     <g transform="translate(57,35) scale(0.09)">
