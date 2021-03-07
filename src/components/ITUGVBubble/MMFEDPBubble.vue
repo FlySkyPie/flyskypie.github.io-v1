@@ -22,7 +22,6 @@
 
 <script>
 import Bubble from "../Bubble.vue";
-import HackmdButton from "../HackmdButton.vue";
 
 export default {
   props: {
@@ -36,7 +35,6 @@ export default {
     },
   },
   components: {
-    "hackmd-button": HackmdButton,
     bubble: Bubble,
   },
   data: () => ({

@@ -15,6 +15,8 @@ export default {
     cy: 0,
     angle: 0,
     isScroll: false,
+    lastScale: "",
+    lastTranslate: "",
   }),
   props: {
     viewWidth: {
@@ -38,10 +40,9 @@ export default {
         const translateY =
           (this.viewHeight / scale / 2 - currentViewpoint.y) * scale;
         const transform = `translate(${translateX}px,${translateY}px)`;
-        this.lastTranslate = transform;
         return `transform:${transform};`;
       } /**/
-      return `transform:${this.lastTranslate};`;
+      return this.lastTranslate;
     },
     transformScale: function () {
       const currentViewpoint = Viewpoints.find(
@@ -51,10 +52,9 @@ export default {
       if (currentViewpoint) {
         const scale = currentViewpoint.scale * this.scale;
         const transform = `scale(${scale})`;
-        this.lastScale = transform;
         return `transform:${transform};`;
       } /**/
-      return `transform:${this.lastScale};`;
+      return this.lastScale;
     },
     transitionClass: function () {
       if (this.isScroll) {
@@ -76,9 +76,15 @@ export default {
     },
   },
   watch: {
-    $route(to, from) {
+    $route() {
       this.scale = 1;
     },
+    transformTranslate(to) {
+      this.lastTranslate = to;
+    },
+    transformScale(to){
+      this.lastScale = to;
+    }
   },
   updated: function () {
     this.$nextTick(function () {

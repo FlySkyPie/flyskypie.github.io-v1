@@ -65,11 +65,7 @@ export default {
     viewHeight: 768,
   }),
   methods: {
-    route: function (message) {},
-    test: function () {
-      //console.log(Creator.getTestDom());
-    },
-    handleResize: function (event) {
+    handleResize: function () {
       this.viewWidth = document.documentElement.clientWidth;
       this.viewHeight = document.documentElement.clientHeight;
     },
