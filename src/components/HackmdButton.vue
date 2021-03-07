@@ -44,11 +44,11 @@ export default {
 </script>
 
 <style scoped>
-.root:active .surface {
+.root:active >>> .surface {
   transform: translateY(0.7px);
 }
 
-.root:hover .button {
+.root:hover >>> .button {
   fill: #c6e3e7;
 }
 
